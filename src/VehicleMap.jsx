@@ -15,8 +15,8 @@ function VehicleMap() {
   useEffect(() => {
     const fetchRoute = async () => {
       try {
-        const start = [78.486671, 17.385044]; 
-        const end = [78.454746, 17.423878]; //THESE ARE THE COORDINATES OF PANJAGUTTA METRO STATION
+        const start = [78.495095, 17.4065539]; 
+        const end = [78.45031, 17.42895]; //THESE ARE THE COORDINATES OF PANJAGUTTA METRO STATION
 
         const response = await fetch(
           `https://router.project-osrm.org/route/v1/driving/${start[0]},${start[1]};${end[0]},${end[1]}?overview=full&geometries=geojson`
