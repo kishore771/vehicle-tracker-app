@@ -4,7 +4,7 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { calculateSpeedKmH } from "./util";
 
-const INITIAL_CENTER = [17.385044, 78.486671]; // THESE ARE THE COORDINATES OF RTC X ROADS METRO STATION
+const INITIAL_CENTER = [17.385044, 78.486671]; // THESE ARE THE COORDINATES OF SUDARSHAN THEATRE, RTC X ROADS
 
 function VehicleMap() {
   const [routeData, setRouteData] = useState([]);
@@ -16,7 +16,7 @@ function VehicleMap() {
     const fetchRoute = async () => {
       try {
         const start = [78.495095, 17.4065539]; 
-        const end = [78.45031, 17.42895]; //THESE ARE THE COORDINATES OF PANJAGUTTA METRO STATION
+        const end = [78.45031, 17.42895]; //THESE ARE THE COORDINATES OF PVR NEXT GALLERIA MALL, PANJAGUTTA.
 
         const response = await fetch(
           `https://router.project-osrm.org/route/v1/driving/${start[0]},${start[1]};${end[0]},${end[1]}?overview=full&geometries=geojson`
